@@ -1,0 +1,431 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	font-family: 'Raleway', sans-serif;
+
+}
+
+h2{
+	font-family: 'Itim', cursive;
+	font-size: 3rem;
+}
+
+h4{
+	text-align: center;
+	font-size: 0.4rem;
+	padding-top: 0.3rem;
+	color: rgb(161, 161, 161);
+}
+
+body{
+    font-size: 16px;
+    margin: 0;
+    background: #fff;
+    color: #000;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+}
+/* Parallax */
+html{
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 1.5;
+	height: 100%;
+
+	perspective: 1px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transform-style: preserve-3d;
+	
+}
+
+/* Parallax 1 */
+
+.V{
+	width: 150%;
+	padding-bottom: 10%;
+}
+
+.marco {
+	width: 20%;
+}
+
+.portada{
+	box-sizing: border-box;
+	min-height: 100vh;
+	padding: 10vh 10vh;
+	position: relative;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+
+	transform-style: inherit;
+}
+.portada h1{
+	font-weight: normal;
+	color: white;
+	letter-spacing: 0.2em;
+	text-align: center;
+	margin: 0;
+	font-size: 60px;
+	text-shadow: 0 0 3px #000000b8;
+}
+.portada:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	background-image: url('../images/portada-provisional.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	min-height: 100vh; 
+
+	transform: translateZ(-1px) scale(2);
+}
+
+/* Reloj */
+
+#reloj{
+	padding: 15vh;
+	background-color: #F6C6C5;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	max-height: 20vh;
+	margin: auto;
+	padding: 0;
+}
+
+.reloj-container{
+	color: #333;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media(max-width: 767px){
+	#headline{
+		font-size: 1.2rem;
+	}
+
+	li{
+		font-size: 0.4rem;
+	}
+
+	.ubicacion-foto{
+		width: 40%;
+	}
+}
+
+@media(min-width: 768px){
+	#headline{
+		font-size: 150%;
+	}
+
+	li{
+		font-size: 95%;
+	}
+
+	.ubicacion-foto{
+		width: 20%;
+	}
+}
+
+
+#headline{
+	font-weight: normal;
+	letter-spacing: 0.05rem;
+	font-family: 'Itim', cursive;
+}
+
+
+li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 1em;
+	text-transform: uppercase;
+	font-family: 'Itim', cursive;
+}
+
+li span{
+	display: block;
+	font-size: 1.5rem;
+	font-family: 'Itim', cursive;
+}
+
+.emoji{
+	display: none;
+	padding: 1rem;
+}
+
+.emoji span{
+	font-size: 4rem;
+	padding: 0 .5rem;
+	font-family: 'Itim', cursive;
+}
+
+
+#countdown{
+	padding: 0;
+}
+/* Ubicacion */
+#ubicacion img{
+	display: block;
+	margin: 0 auto 20px;
+	border: 0;
+	border-radius: 50%;
+	opacity: 0;
+	animation-name: bounceIn;
+	animation-duration: 1500ms;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bounceIn{
+	0%{
+	  opacity: 0;
+	  transform: scale(0.3) translate3d(0,0,0);
+	}
+	50%{
+	  opacity: 0.9;
+	  transform: scale(1.1);
+	}
+	80%{
+	  opacity: 1;
+	  transform: scale(0.89);
+	}
+	100%{
+	  opacity: 1;
+	  transform: scale(1) translate3d(0,0,0);
+	}
+  }
+
+#ubicacion{
+	padding: 10vh;
+	background-color: white;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+#ubicacion h2{
+	letter-spacing: 0.08rem;
+}
+
+.ubicacion{
+	margin:0px auto;
+}
+
+/* Asistencia */
+#asistencia{
+	padding: 10vh;
+	background-color: pink;
+	;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.asistencia{
+	margin:0px auto;
+}
+
+/* Vestimenta */
+#vestimenta{
+	padding: 10vh;
+	background-color: white;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.vestimenta{
+	margin:0px auto;
+}
+/* Parallax 2 */
+.instagram{
+	margin:0px auto;
+	text-align: center;
+}
+
+.instagram a{
+	text-align: center;
+	color: #fff;
+}
+
+.instagram img{
+	width: 55%;
+	display: block;
+	margin: 0 auto 20px;
+	border: 0;
+	border-radius: 50%;
+	opacity: 0;
+	animation-name: bounceIn;
+	animation-duration: 1500ms;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+
+#instagram{
+	box-sizing: border-box;
+	padding: 10vh 10vh;
+	position: relative;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-style: inherit;
+	color: #fff;
+}
+
+
+
+#instagram h4{
+	color: #fff;
+	font-weight: normal;
+	text-align: center;
+	margin: 0;
+	font-size: 2rem;
+	text-shadow: 0 0 3px #000000b8;
+}
+#instagram:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	background-image: url('../images/instagram-provisional.jpg');
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+	z-index: -1;
+	min-height: 70vh; 
+
+	transform: translateZ(-1px) scale(2);
+}
+
+/* Musica */
+#musica{
+	padding: 10vh;
+	background-color: white;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.musica{
+	margin:0px auto;
+}
+
+.musica img{
+		width: 36%;
+		display: block;
+		margin: 0 auto 0;
+		border: 0;
+		border-radius: 50%;
+		opacity: 0;
+		animation-name: bounceIn;
+		animation-duration: 1500ms;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
+}
+
+/* Regalos */
+#regalos{
+	padding: 10vh;
+	background-color: pink;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.regalos{
+	margin:0px auto;
+}
+
+.regalos img{
+		width: 36%;
+		display: block;
+		margin: 0 auto 0;
+		border: 0;
+		border-radius: 50%;
+		opacity: 0;
+		animation-name: bounceIn;
+		animation-duration: 1500ms;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+		animation-iteration-count: infinite;
+}
+
+.contacto{
+	background-color: rgb(197, 197, 197);
+}
+
+
+/* Boton */
+
+.myButton {
+	background-color:#5afaa0;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#75e23e;
+	color: white;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
